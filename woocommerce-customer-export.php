@@ -17,4 +17,9 @@ Text Domain:  wcex
 Domain Path:  /
 */
 
-define('HubGiftApi_PREFIX', 'wcex');
+define('WCEX_PREFIX', 'wcex_');
+
+
+final class WoocommerceCustomerExport {}
+
+WoocommerceCustomerExport::instance();
