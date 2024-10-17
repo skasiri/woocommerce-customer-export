@@ -17,7 +17,8 @@ Text Domain:  wcex
 Domain Path:  /
 */
 
-define('WCEX_PREFIX', 'wcex_');
+// Global Plugin Prefix
+define('WCEX_PREFIX', 'wcex');
 
 
 final class WoocommerceCustomerExport
