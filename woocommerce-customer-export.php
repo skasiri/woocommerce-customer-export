@@ -32,7 +32,22 @@ final class WoocommerceCustomerExport
         return self::$_instance;
     }
 
-    public function __construct() {}
+    public function __construct()
+    {
+        // Register Locale Files
+        add_action('init', [$this, 'i18n']);
+        // Plugin initialization
+        $this->init();
+    }
+
+    // Register Locale Files
+    public function i18n()
+    {
+        load_plugin_textdomain(WCEX_PREFIX, false, dirname(plugin_basename(__FILE__)) . '/languages');
+    }
+
+    // Plugin initialization
+    public function init() {}
 }
 
 WoocommerceCustomerExport::instance();
